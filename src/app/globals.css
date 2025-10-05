@@ -1,15 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Argus Color Scheme */
+  --midnight-navy: #0F172A;
+  --sky: #7FB7FF;
+  --auric-gold: #C9A23A;
+  --pale-gold: #E7C873;
+  --deep-slate: #233247;
+  --mist: #F2F5F9;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: 'Libre Franklin', sans-serif;
+  --font-mono: 'IBM Plex Sans', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +32,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
 }
