@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Building2, Truck, Car, Shield, Scale, ArrowRight, CheckCircle } from 'lucide-react';
 import CallToAction from '@/app/components/calltoaction';
 const Industries = () => {
@@ -111,6 +111,25 @@ const Industries = () => {
 
   const active = industries.find(i => i.id === activeIndustry) || industries[0];
   const Icon = active.icon;
+
+  useEffect(() => {
+  const handleHashChange = () => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash && industries.some(i => i.id === hash)) {
+      setActiveIndustry(hash);
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
+    }
+  };
+
+  handleHashChange();
+  window.addEventListener('hashchange', handleHashChange);
+
+  return () => {
+    window.removeEventListener('hashchange', handleHashChange);
+  };
+}, []);
 
   return (
     <div className="min-h-screen bg-white">

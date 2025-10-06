@@ -8,85 +8,83 @@ import { Building2, Truck, Car, Scale, Shield, ChevronLeft, ChevronRight } from 
 export default function Solutions() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-
-  const solutions = [
-    {
-      icon: Building2,
-      title: 'Government',
-      subtitle: 'Smart Cities on the Path to Vision Zero',
-      description: 'Advanced technology solutions that deliver traffic intelligence and build smarter, safer cities. Real-time incident detection supports Vision Zero initiatives by identifying and responding to hazards before they escalate.',
-      features: [
-        'Traffic intelligence & monitoring',
-        'Vision Zero pathway support',
-        'Smart city infrastructure',
-        'Real-time incident response'
-      ],
-      image: '/images/government1.png',
-      link: '/industries/government',
-      color: 'bg-blue-600'
-    },
-    {
-      icon: Truck,
-      title: 'Fleet/Last Mile',
-      subtitle: 'Improving Deliveries & Reducing Costs',
-      description: '5-15% more deliveries per hour in urban areas with heavy congestion. Our real-time alerts optimize routing, reduce fuel spend, improve driver Hours of Service compliance, and increase delivery efficiency.',
-      features: [
-        '5-15% more deliveries/hour',
-        'Reduce fuel spend',
-        'Improve driver HOS',
-        'Safer, less congested routing'
-      ],
-      image: '/images/lastmile1.png',
-      link: '/industries/fleet-last-mile',
-      color: 'bg-green-600'
-    },
-    {
-      icon: Car,
-      title: 'Ride Share/Mobility',
-      subtitle: 'Intelligent Routing with World\'s Fastest Alerts',
-      description: '5-15% more rides per hour in urban areas and heavy congestion. Comprehensive mobility intelligence for rideshare and transportation platforms powered by the fastest real-time traffic alerts available.',
-      features: [
-        '5-15% more rides/hour',
-        'World\'s fastest traffic alerts',
-        'Dynamic route optimization',
-        'Improved ETAs & reliability'
-      ],
-      image: '/images/rideshare1.png',
-      link: '/industries/rideshare-mobility',
-      color: 'bg-purple-600'
-    },
-    {
-      icon: Shield,
-      title: 'InsurTech',
-      subtitle: 'Risk Assessment Revolutionized by Data',
-      description: '30% improvement in fraud detection. Reduce disputed liability and fraud with comprehensive accident archives. AI-powered analysis of traffic incidents provides insurers with objective evidence for faster, more accurate claims processing.',
-      features: [
-        '30% fraud detection improvement',
-        'Reduce disputed liability',
-        'Accident video archives',
-        'Faster claims processing'
-      ],
-      image: '/images/insurtech.png',
-      link: '/industries/insurtech',
-      color: 'bg-red-500'
-    },
-    {
-      icon: Scale,
-      title: 'Forensics',
-      subtitle: 'Digital Truth Through Intelligent Investigation',
-      description: 'Reduce investigation time by 60% with AI-powered analysis. Digital forensics and investigative intelligence tools that process terabytes of evidence automatically, finding critical footage across thousands of cameras in minutes.',
-      features: [
-        '60% faster investigations',
-        'AI-powered evidence analysis',
-        'Terabyte-scale processing',
-        'Multi-camera search'
-      ],
-      image: '/images/forensics1.png',
-      link: '/industries/forensics',
-      color: 'bg-indigo-600'
-    }
-  ];
-
+const solutions = [
+  {
+    icon: Building2,
+    title: 'Government',
+    subtitle: 'Smart Cities on the Path to Vision Zero',
+    description: 'Advanced technology solutions that deliver traffic intelligence and build smarter, safer cities. Real-time incident detection supports Vision Zero initiatives by identifying and responding to hazards before they escalate.',
+    features: [
+      'Traffic intelligence & monitoring',
+      'Vision Zero pathway support',
+      'Smart city infrastructure',
+      'Real-time incident response'
+    ],
+    image: '/images/government1.png',
+    link: '/industries#government',
+    color: 'bg-blue-600'
+  },
+  {
+    icon: Truck,
+    title: 'Fleet/Last Mile',
+    subtitle: 'Improving Deliveries & Reducing Costs',
+    description: '5-15% more deliveries per hour in urban areas with heavy congestion. Our real-time alerts optimize routing, reduce fuel spend, improve driver Hours of Service compliance, and increase delivery efficiency.',
+    features: [
+      '5-15% more deliveries/hour',
+      'Reduce fuel spend',
+      'Improve driver HOS',
+      'Safer, less congested routing'
+    ],
+    image: '/images/lastmile1.png',
+    link: '/industries#fleet',
+    color: 'bg-green-600'
+  },
+  {
+    icon: Car,
+    title: 'Ride Share/Mobility',
+    subtitle: 'Intelligent Routing with World\'s Fastest Alerts',
+    description: '5-15% more rides per hour in urban areas and heavy congestion. Comprehensive mobility intelligence for rideshare and transportation platforms powered by the fastest real-time traffic alerts available.',
+    features: [
+      '5-15% more rides/hour',
+      'World\'s fastest traffic alerts',
+      'Dynamic route optimization',
+      'Improved ETAs & reliability'
+    ],
+    image: '/images/rideshare1.png',
+    link: '/industries#rideshare',
+    color: 'bg-purple-600'
+  },
+  {
+    icon: Shield,
+    title: 'InsurTech',
+    subtitle: 'Risk Assessment Revolutionized by Data',
+    description: '30% improvement in fraud detection. Reduce disputed liability and fraud with comprehensive accident archives. AI-powered analysis of traffic incidents provides insurers with objective evidence for faster, more accurate claims processing.',
+    features: [
+      '30% fraud detection improvement',
+      'Reduce disputed liability',
+      'Accident video archives',
+      'Faster claims processing'
+    ],
+    image: '/images/insurtech.png',
+    link: '/industries#insurtech',
+    color: 'bg-red-500'
+  },
+  {
+    icon: Scale,
+    title: 'Forensics',
+    subtitle: 'Digital Truth Through Intelligent Investigation',
+    description: 'Reduce investigation time by 60% with AI-powered analysis. Digital forensics and investigative intelligence tools that process terabytes of evidence automatically, finding critical footage across thousands of cameras in minutes.',
+    features: [
+      '60% faster investigations',
+      'AI-powered evidence analysis',
+      'Terabyte-scale processing',
+      'Multi-camera search'
+    ],
+    image: '/images/forensics1.png',
+    link: '/industries#forensics',
+    color: 'bg-indigo-600'
+  }
+];
   // Auto-rotate carousel with pause capability
   useEffect(() => {
     if (isPaused) return;
