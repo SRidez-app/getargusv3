@@ -70,7 +70,7 @@ export default function Hero() {
             href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3opt3pRGPQDYnT5IBpyltSRS764eRUP_ptoibtRyObzq1DwIR799VDAlXQucq2AnDlZgrN3vPV"
                 className="inline-block bg-[#C9A23A] text-white px-8 py-2 rounded-lg text-lg font-semibold hover:bg-[#E7C873] transition-colors duration-200 shadow-lg"
               >
-               Get a demo
+               Contact Us
               </a>
             </div>
           </div>
