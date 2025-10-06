@@ -1,0 +1,176 @@
+# robots.txt for www.getargus.ai
+# Optimized for search engines and AI model crawlers
+
+# ==================================================
+# ALLOW ALL CRAWLERS - Default Policy
+# ==================================================
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# ==================================================
+# SITEMAP LOCATION
+# ==================================================
+Sitemap: https://www.getargus.ai/sitemap.xml
+
+# ==================================================
+# SEARCH ENGINE CRAWLERS
+# ==================================================
+
+# Google (Googlebot, Google-Extended for AI training)
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+# Google AI training (Gemini, Bard, etc.)
+User-agent: Google-Extended
+Allow: /
+
+# Google specific crawlers
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: APIs-Google
+Allow: /
+
+# ==================================================
+# AI MODEL CRAWLERS
+# ==================================================
+
+# OpenAI (ChatGPT, GPT-4, etc.)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic (Claude)
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Common Crawl (used by many AI models)
+User-agent: CCBot
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# Meta AI (Facebook/Instagram AI)
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Bytedance/TikTok (used for AI training)
+User-agent: Bytespider
+Allow: /
+
+# Apple (AppleBot for Siri, Spotlight)
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ==================================================
+# X/TWITTER AI (Grok)
+# ==================================================
+User-agent: Twitterbot
+Allow: /
+
+User-agent: X-Bot
+Allow: /
+
+# Grok crawler (if separate from Twitterbot)
+User-agent: GrokBot
+Allow: /
+
+# ==================================================
+# OTHER SEARCH ENGINES
+# ==================================================
+
+# Bing/Microsoft
+User-agent: bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: msnbot
+Allow: /
+
+# Yahoo
+User-agent: Slurp
+Allow: /
+
+# Yandex (Russian search)
+User-agent: Yandex
+Allow: /
+
+# Baidu (Chinese search)
+User-agent: Baiduspider
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# ==================================================
+# RESEARCH & ACADEMIC CRAWLERS
+# ==================================================
+
+# Internet Archive
+User-agent: ia_archiver
+Allow: /
+
+# Academic search engines
+User-agent: Mediapartners-Google
+Allow: /
+
+# ==================================================
+# OPTIONAL: BLOCK SPECIFIC PATHS (if needed)
+# ==================================================
+# Uncomment these if you want to block certain areas
+
+# Disallow: /admin/
+# Disallow: /api/
+# Disallow: /_next/
+# Disallow: /private/
+
+# ==================================================
+# DISALLOW BAD BOTS (Optional - Uncomment if needed)
+# ==================================================
+# Block known scrapers/spammers that don't respect robots.txt
+
+# User-agent: AhrefsBot
+# Disallow: /
+
+# User-agent: SemrushBot
+# Disallow: /
+
+# User-agent: MJ12bot
+# Disallow: /
+
+# User-agent: DotBot
+# Disallow: /
+
+# ==================================================
+# ADDITIONAL NOTES
+# ==================================================
+# Last Updated: 2025-01-15
+# Contact: info@getargus.ai
+# All legitimate AI crawlers and search engines are welcome
+# to index our content for training and search purposes.
