@@ -256,9 +256,9 @@ export default function Terms() {
             <p className="text-gray-700 mb-1">
               Email:{' '}
               <a href="mailto:hello@getargus.ai" className="text-[#C9A23A] hover:underline">
-                hello@getargus.ai
-              </a>
-            </p>
+              hello@getargus.ai
+            </a>.
+          </p>
             <p className="text-gray-700">
               Website:{' '}
               <a href="https://www.getargus.ai" target="_blank" rel="noopener noreferrer" className="text-[#C9A23A] hover:underline">

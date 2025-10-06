@@ -180,7 +180,7 @@ const leaders = [
     Want to learn more about how our team can transform your operations?
   </p>
   <a 
-    href="https://calendly.com/getargusai/30min?month=2025-08"
+ href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3opt3pRGPQDYnT5IBpyltSRS764eRUP_ptoibtRyObzq1DwIR799VDAlXQucq2AnDlZgrN3vPV"
     target="_blank"
     rel="noopener noreferrer"
     className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-lg text-white bg-[#C9A23A] hover:bg-[#E7C873] transform hover:scale-105 transition-all duration-200 shadow-lg"

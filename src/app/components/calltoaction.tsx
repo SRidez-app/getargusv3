@@ -62,7 +62,7 @@ const CallToAction = () => {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
-             href="https://calendly.com/getargusai/30min?month=2025-08"
+            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3opt3pRGPQDYnT5IBpyltSRS764eRUP_ptoibtRyObzq1DwIR799VDAlXQucq2AnDlZgrN3vPV"
             className="group inline-flex items-center px-8 py-4 bg-[#C9A23A] hover:bg-[#E7C873] text-white rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
           >
             Schedule Your Demo

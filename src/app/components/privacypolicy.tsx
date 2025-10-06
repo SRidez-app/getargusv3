@@ -177,7 +177,7 @@ export default function PrivacyPolicy() {
             <li><strong>Marketing Preferences:</strong> Opt out of promotional emails or targeted advertising.</li>
             <li><strong>Do Not Track (DNT):</strong> While AAI respects browser DNT signals, third-party services may not respond to them consistently.</li>
           </ul>
-          <p>
+    <p>
             To exercise any of these rights, contact us at{' '}
             <a href="mailto:hello@getargus.ai" className="text-[#C9A23A] hover:underline">
               hello@getargus.ai

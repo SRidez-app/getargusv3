@@ -235,10 +235,10 @@ const solutions = [
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <Link 
-           href="https://calendly.com/getargusai/30min?month=2025-08"
+           href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3opt3pRGPQDYnT5IBpyltSRS764eRUP_ptoibtRyObzq1DwIR799VDAlXQucq2AnDlZgrN3vPV"
             className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-lg text-[#233247] bg-[#C9A23A] hover:bg-[#E7C873] transform hover:scale-105 transition-all duration-200 shadow-lg"
           >
-            Schedule a Demo
+            Contact Us
             <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>

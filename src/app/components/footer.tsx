@@ -129,6 +129,7 @@ export default function Footer() {
 </div>
 
           {/* Company Column - Desktop */}
+  {/* Company Column - Desktop */}
           <div className="hidden lg:block">
             <h3 className="font-semibold text-base mb-4 text-[#C9A23A]">Company</h3>
             <ul className="space-y-2.5">
@@ -137,16 +138,12 @@ export default function Footer() {
                   About
                 </Link>
               </li>
-              {/* <li>
-                <Link href="/contact" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
-                  Contact
-                </Link>
-              </li>
               <li>
-                <Link href="/archives" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
-                  Archives
-                </Link>
-              </li> */}
+                <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3opt3pRGPQDYnT5IBpyltSRS764eRUP_ptoibtRyObzq1DwIR799VDAlXQucq2AnDlZgrN3vPV" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
+                  Contact
+                </a>
+              </li>
+      
             </ul>
             <div className="mt-6 space-y-2">
               <div className="flex items-center space-x-2">
@@ -161,6 +158,7 @@ export default function Footer() {
             </div>
           </div>
 
+          
           {/* Mobile Navigation - Accordion Style */}
           <div className="lg:hidden w-full space-y-4">
             {/* Solutions Dropdown */}
