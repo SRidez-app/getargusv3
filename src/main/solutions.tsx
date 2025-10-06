@@ -237,7 +237,7 @@ export default function Solutions() {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <Link 
-            href="/contact"
+           href="https://calendly.com/getargusai/30min?month=2025-08"
             className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-lg text-[#233247] bg-[#C9A23A] hover:bg-[#E7C873] transform hover:scale-105 transition-all duration-200 shadow-lg"
           >
             Schedule a Demo

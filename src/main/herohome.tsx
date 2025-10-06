@@ -67,7 +67,7 @@ export default function Hero() {
             {/* CTA Button */}
   <div className="mt-8">
               <a
-                href="/contact"
+                href="https://calendly.com/getargusai/30min?month=2025-08"
                 className="inline-block bg-[#C9A23A] text-white px-8 py-2 rounded-lg text-lg font-semibold hover:bg-[#E7C873] transition-colors duration-200 shadow-lg"
               >
                Get a demo

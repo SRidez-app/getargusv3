@@ -3,11 +3,16 @@
 import { useState, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
+  
+  const pathname = usePathname();
+  const isOnSolutionsPage = pathname === '/solutions';
+  const isOnIndustriesPage = pathname === '/industries';
   
   const solutionsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const industriesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -65,41 +70,49 @@ export default function Header() {
             {/* Solutions Dropdown */}
             <div 
               className="relative"
-              onMouseEnter={handleSolutionsMouseEnter}
-              onMouseLeave={handleSolutionsMouseLeave}
+              onMouseEnter={!isOnSolutionsPage ? handleSolutionsMouseEnter : undefined}
+              onMouseLeave={!isOnSolutionsPage ? handleSolutionsMouseLeave : undefined}
             >
               <Link
                 href="/solutions"
-                className="text-[#0F172A] hover:text-[#C9A23A] transition-colors duration-200 font-medium"
+                className={`transition-colors duration-200 font-medium ${
+                  isOnSolutionsPage 
+                    ? 'text-[#C9A23A] border-b-2 border-[#C9A23A] pb-1' 
+                    : 'text-[#0F172A] hover:text-[#C9A23A]'
+                }`}
               >
                 Solutions
               </Link>
               
-              {isSolutionsOpen && (
+              {isSolutionsOpen && !isOnSolutionsPage && (
                 <div className="fixed left-1/2 transform -translate-x-1/2 top-20 w-[528px] bg-white shadow-xl rounded-b-lg overflow-hidden border border-gray-100">
                   <div className="flex">
                     {/* Left side - Menu items */}
                     <div className="flex-1 p-6">
                       <Link
-                        href="/solutions/mobility-traffic-intelligence"
+                        href="/solutions#mobility"
+                        onClick={() => setIsSolutionsOpen(false)}
                         className="block py-2.5 px-3 text-[#0F172A] hover:bg-[#F2F5F9] hover:text-[#C9A23A] transition-colors duration-200 rounded-md font-medium text-sm"
                       >
                         Mobility & Traffic Intelligence
                       </Link>
                       <Link
-                        href="/solutions/incident-management-911"
+                        href="/solutions#incident-911"
+                        onClick={() => setIsSolutionsOpen(false)}
                         className="block py-2.5 px-3 text-[#0F172A] hover:bg-[#F2F5F9] hover:text-[#C9A23A] transition-colors duration-200 rounded-md font-medium text-sm"
                       >
                         Incident Management & 911
                       </Link>
                       <Link
-                        href="/solutions/public-records-open-data"
+                        href="/solutions#public-records"
+                        onClick={() => setIsSolutionsOpen(false)}
                         className="block py-2.5 px-3 text-[#0F172A] hover:bg-[#F2F5F9] hover:text-[#C9A23A] transition-colors duration-200 rounded-md font-medium text-sm"
                       >
                         Public Records & Open Data
                       </Link>
                       <Link
-                        href="/solutions/cctv-streaming-distribution"
+                        href="/solutions#cctv-distribution"
+                        onClick={() => setIsSolutionsOpen(false)}
                         className="block py-2.5 px-3 text-[#0F172A] hover:bg-[#F2F5F9] hover:text-[#C9A23A] transition-colors duration-200 rounded-md font-medium text-sm"
                       >
                         CCTV Streaming & Distribution
@@ -124,47 +137,56 @@ export default function Header() {
             {/* Industries Dropdown */}
             <div 
               className="relative"
-              onMouseEnter={handleIndustriesMouseEnter}
-              onMouseLeave={handleIndustriesMouseLeave}
+              onMouseEnter={!isOnIndustriesPage ? handleIndustriesMouseEnter : undefined}
+              onMouseLeave={!isOnIndustriesPage ? handleIndustriesMouseLeave : undefined}
             >
               <Link
                 href="/industries"
-                className="text-[#0F172A] hover:text-[#C9A23A] transition-colors duration-200 font-medium"
+                className={`transition-colors duration-200 font-medium ${
+                  isOnIndustriesPage 
+                    ? 'text-[#C9A23A] border-b-2 border-[#C9A23A] pb-1' 
+                    : 'text-[#0F172A] hover:text-[#C9A23A]'
+                }`}
               >
                 Industries
               </Link>
               
-              {isIndustriesOpen && (
+              {isIndustriesOpen && !isOnIndustriesPage && (
                 <div className="fixed left-1/2 transform -translate-x-1/2 top-20 w-[528px] bg-white shadow-xl rounded-b-lg overflow-hidden border border-gray-100">
                   <div className="flex">
                     {/* Left side - Menu items */}
                     <div className="flex-1 p-6">
                       <Link
                         href="/industries#government"
+                        onClick={() => setIsIndustriesOpen(false)}
                         className="block py-2.5 px-3 text-[#0F172A] hover:bg-[#F2F5F9] hover:text-[#C9A23A] transition-colors duration-200 rounded-md font-medium text-sm"
                       >
                         Government
                       </Link>
                       <Link
                         href="/industries#fleet"
+                        onClick={() => setIsIndustriesOpen(false)}
                         className="block py-2.5 px-3 text-[#0F172A] hover:bg-[#F2F5F9] hover:text-[#C9A23A] transition-colors duration-200 rounded-md font-medium text-sm"
                       >
                         Fleet/Last Mile
                       </Link>
                       <Link
                         href="/industries#rideshare"
+                        onClick={() => setIsIndustriesOpen(false)}
                         className="block py-2.5 px-3 text-[#0F172A] hover:bg-[#F2F5F9] hover:text-[#C9A23A] transition-colors duration-200 rounded-md font-medium text-sm"
                       >
                         Ride Share/Mobility
                       </Link>
                       <Link
                         href="/industries#insurtech"
+                        onClick={() => setIsIndustriesOpen(false)}
                         className="block py-2.5 px-3 text-[#0F172A] hover:bg-[#F2F5F9] hover:text-[#C9A23A] transition-colors duration-200 rounded-md font-medium text-sm"
                       >
                         InsurTech
                       </Link>
                       <Link
                         href="/industries#forensics"
+                        onClick={() => setIsIndustriesOpen(false)}
                         className="block py-2.5 px-3 text-[#0F172A] hover:bg-[#F2F5F9] hover:text-[#C9A23A] transition-colors duration-200 rounded-md font-medium text-sm"
                       >
                         Forensics
@@ -197,7 +219,7 @@ export default function Header() {
           {/* Contact Button - Far Right */}
           <div className="hidden md:flex md:items-center md:justify-end w-1/4">
             <Link
-              href="/contact"
+           href="https://calendly.com/getargusai/30min?month=2025-08"
               className="bg-[#C9A23A] text-white px-6 py-2.5 rounded-md hover:bg-[#E7C873] transition-colors duration-200 font-semibold"
             >
               Contact

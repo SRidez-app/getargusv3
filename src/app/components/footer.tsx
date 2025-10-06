@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -9,6 +9,8 @@ export default function Footer() {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+
+
 
   return (
     <footer className="bg-[#0F172A] text-white">
@@ -34,39 +36,40 @@ export default function Footer() {
           </div>
 
           {/* Solutions Column - Desktop */}
-          <div className="hidden lg:block">
-            <h3 className="font-semibold text-base mb-4 text-[#C9A23A]">Solutions</h3>
-            <ul className="space-y-2.5">
-              <li>
-                <Link href="/solutions" className="text-gray-300 hover:text-[#C9A23A] transition-colors duration-200 text-sm font-semibold">
-                  All Solutions
-                </Link>
-              </li>
-              <li>
-                <Link href="/solutions/dots-its" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
-                  DOTs / ITS
-                </Link>
-              </li>
-              <li>
-                <Link href="/solutions/ng911" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
-                  911/PSAPs
-                </Link>
-              </li>
-              <li>
-                <Link href="/solutions/public-safety" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
-                  Public Records & Open Data
-                </Link>
-              </li>
-              <li>
-                <Link href="/solutions/streaming-platform" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
-                 CCTV Streaming & Distribution
-                </Link>
-              </li>
-            </ul>
-          </div>
+    {/* Solutions Column - Desktop */}
+<div className="hidden lg:block">
+  <h3 className="font-semibold text-base mb-4 text-[#C9A23A]">Solutions</h3>
+  <ul className="space-y-2.5">
+    <li>
+      <Link href="/solutions" className="text-gray-300 hover:text-[#C9A23A] transition-colors duration-200 text-sm font-semibold">
+        All Solutions
+      </Link>
+    </li>
+    <li>
+      <Link href="/solutions#mobility" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
+        DOTs / ITS
+      </Link>
+    </li>
+    <li>
+      <Link href="/solutions#incident-911" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
+        911/PSAPs
+      </Link>
+    </li>
+    <li>
+      <Link href="/solutions#public-records" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
+        Public Records & Open Data
+      </Link>
+    </li>
+    <li>
+      <Link href="/solutions#cctv-distribution" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
+        CCTV Streaming & Distribution
+      </Link>
+    </li>
+  </ul>
+</div>
 
           {/* Products Column - Desktop */}
-          <div className="hidden lg:block">
+          {/* <div className="hidden lg:block">
             <h3 className="font-semibold text-base mb-4 text-[#C9A23A]">Products</h3>
             <ul className="space-y-2.5">
               <li>
@@ -85,44 +88,45 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Industries Column - Desktop */}
-          <div className="hidden lg:block">
-            <h3 className="font-semibold text-base mb-4 text-[#C9A23A]">Industries</h3>
-            <ul className="space-y-2.5">
-              <li>
-                <Link href="/industries" className="text-gray-300 hover:text-[#C9A23A] transition-colors duration-200 text-sm font-semibold">
-                  All Industries
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries/fleet-last-mile" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
-                  Fleet / Last Mile
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries/ride-share" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
-                  Ride Share / Mobility
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries/insurtech" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
-                  InsurTech
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries/forensics" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
-                  Forensics
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries/government" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
-                  Government
-                </Link>
-              </li>
-            </ul>
-          </div>
+       {/* Industries Column - Desktop */}
+<div className="hidden lg:block">
+  <h3 className="font-semibold text-base mb-4 text-[#C9A23A]">Industries</h3>
+  <ul className="space-y-2.5">
+    <li>
+      <Link href="/industries" className="text-gray-300 hover:text-[#C9A23A] transition-colors duration-200 text-sm font-semibold">
+        All Industries
+      </Link>
+    </li>
+    <li>
+      <Link href="/industries#fleet-last-mile" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
+        Fleet / Last Mile
+      </Link>
+    </li>
+    <li>
+      <Link href="/industries#ride-share" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
+        Ride Share / Mobility
+      </Link>
+    </li>
+    <li>
+      <Link href="/industries#insurtech" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
+        InsurTech
+      </Link>
+    </li>
+    <li>
+      <Link href="/industries#forensics" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
+        Forensics
+      </Link>
+    </li>
+    <li>
+      <Link href="/industries#government" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
+        Government
+      </Link>
+    </li>
+  </ul>
+</div>
 
           {/* Company Column - Desktop */}
           <div className="hidden lg:block">
@@ -133,7 +137,7 @@ export default function Footer() {
                   About
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/contact" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
                   Contact
                 </Link>
@@ -142,7 +146,7 @@ export default function Footer() {
                 <Link href="/archives" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
                   Archives
                 </Link>
-              </li>
+              </li> */}
             </ul>
             <div className="mt-6 space-y-2">
               <div className="flex items-center space-x-2">
@@ -178,39 +182,39 @@ export default function Footer() {
                   <path d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              {isSolutionsOpen && (
-                <ul className="pb-4 space-y-2">
-                  <li>
-                    <Link href="/solutions" className="block text-gray-300 hover:text-[#C9A23A] transition-colors duration-200 py-2 font-semibold">
-                      All Solutions
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/solutions/dots-its" className="block text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 py-2">
-                      DOTs / ITS
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/solutions/ng911" className="block text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 py-2">
-                      NG911
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/solutions/public-safety" className="block text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 py-2">
-                      Public Safety Video Records
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/solutions/streaming-platform" className="block text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 py-2">
-                      Streaming Platform Architecture
-                    </Link>
-                  </li>
-                </ul>
-              )}
+             {isSolutionsOpen && (
+  <ul className="pb-4 space-y-2">
+    <li>
+      <Link href="/solutions" className="block text-gray-300 hover:text-[#C9A23A] transition-colors duration-200 py-2 font-semibold">
+        All Solutions
+      </Link>
+    </li>
+    <li>
+      <Link href="/solutions#mobility" className="block text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 py-2">
+        DOTs / ITS
+      </Link>
+    </li>
+    <li>
+      <Link href="/solutions#incident-911" className="block text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 py-2">
+        911/PSAPs
+      </Link>
+    </li>
+    <li>
+      <Link href="/solutions#public-records" className="block text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 py-2">
+        Public Records & Open Data
+      </Link>
+    </li>
+    <li>
+      <Link href="/solutions#cctv-distribution" className="block text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 py-2">
+        CCTV Streaming & Distribution
+      </Link>
+    </li>
+  </ul>
+)}
             </div>
 
             {/* Products Dropdown */}
-            <div className="border-b border-gray-700">
+            {/* <div className="border-b border-gray-700">
               <button
                 onClick={() => setIsProductsOpen(!isProductsOpen)}
                 className="w-full flex justify-between items-center py-3 text-[#C9A23A] font-semibold"
@@ -247,7 +251,7 @@ export default function Footer() {
                   </li>
                 </ul>
               )}
-            </div>
+            </div> */}
 
             {/* Industries Dropdown */}
             <div className="border-b border-gray-700">
@@ -268,40 +272,40 @@ export default function Footer() {
                   <path d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              {isIndustriesOpen && (
-                <ul className="pb-4 space-y-2">
-                  <li>
-                    <Link href="/industries" className="block text-gray-300 hover:text-[#C9A23A] transition-colors duration-200 py-2 font-semibold">
-                      All Industries
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/industries/fleet-last-mile" className="block text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 py-2">
-                      Fleet / Last Mile
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/industries/ride-share" className="block text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 py-2">
-                      Ride Share / Mobility
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/industries/insurtech" className="block text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 py-2">
-                      InsurTech
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/industries/forensics" className="block text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 py-2">
-                      Forensics
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/industries/government" className="block text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 py-2">
-                      Government
-                    </Link>
-                  </li>
-                </ul>
-              )}
+      {isIndustriesOpen && (
+  <ul className="pb-4 space-y-2">
+    <li>
+      <Link href="/industries" className="block text-gray-300 hover:text-[#C9A23A] transition-colors duration-200 py-2 font-semibold">
+        All Industries
+      </Link>
+    </li>
+    <li>
+      <Link href="/industries#fleet-last-mile" className="block text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 py-2">
+        Fleet / Last Mile
+      </Link>
+    </li>
+    <li>
+      <Link href="/industries#ride-share" className="block text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 py-2">
+        Ride Share / Mobility
+      </Link>
+    </li>
+    <li>
+      <Link href="/industries#insurtech" className="block text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 py-2">
+        InsurTech
+      </Link>
+    </li>
+    <li>
+      <Link href="/industries#forensics" className="block text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 py-2">
+        Forensics
+      </Link>
+    </li>
+    <li>
+      <Link href="/industries#government" className="block text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 py-2">
+        Government
+      </Link>
+    </li>
+  </ul>
+)}
             </div>
 
             {/* Company Dropdown */}

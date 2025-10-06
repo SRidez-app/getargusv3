@@ -3,7 +3,8 @@ import Hero from "@/main/herohome";
 import Overview from "@/main/overview";
 import Solutions from "@/main/solutions";
 import ProductsPage from "@/main/products";
-import Footer from "./components/footer";
+import Footer from "./components/footer"
+import CallToAction from "./components/calltoaction";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Overview />
         <Solutions />
         <ProductsPage />
+      <CallToAction />
         <Footer />
     </>
   );
