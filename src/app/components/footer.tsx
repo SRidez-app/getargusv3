@@ -333,15 +333,15 @@ export default function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/contact" className="block text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 py-2">
+                    <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3opt3pRGPQDYnT5IBpyltSRS764eRUP_ptoibtRyObzq1DwIR799VDAlXQucq2AnDlZgrN3vPV" className="text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 text-sm">
                       Contact
-                    </Link>
+                    </a>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="/archives" className="block text-gray-400 hover:text-[#C9A23A] transition-colors duration-200 py-2">
                       Archives
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               )}
             </div>
