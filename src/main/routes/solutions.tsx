@@ -256,7 +256,7 @@ const Solutions = () => {
 
           {/* Case Study */}
           <div className="bg-[#0F172A] rounded-2xl p-8 md:p-12 text-white">
-            <div className="flex items-center justify-between mb-8">
+            {/* <div className="flex items-center justify-between mb-8">
               <h3 className="text-2xl font-bold">Real results</h3>
               <button
                 onClick={() => setExpandedCase(expandedCase === activeTab ? null : activeTab)}
@@ -264,7 +264,7 @@ const Solutions = () => {
               >
                 {expandedCase === activeTab ? 'Show less' : 'Read full case study'}
               </button>
-            </div>
+            </div> */}
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div>
