@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
           </p>
           
           <h4 className="font-semibold text-[#0F172A] mb-3 mt-6">1.1. Automatically Collected Data</h4>
-          <p className="mb-3">When you visit trafficdatagroup.com, we may automatically collect:</p>
+          <p className="mb-3">When you visit getargus.ai, we may automatically collect:</p>
           <ul className="list-disc pl-6 space-y-2 mb-4">
             <li><strong>Log Data:</strong> IP address, browser type, device information, and timestamps.</li>
             <li><strong>Usage Data:</strong> Page visits, interactions, preferences, and navigation patterns.</li>
@@ -139,7 +139,7 @@ export default function PrivacyPolicy() {
             Argus AI strictly prohibits the unauthorized redistribution of its data, video feeds, and content.
           </p>
           <ul className="list-disc pl-6 space-y-2 mb-4">
-            <li>No content from trafficdatagroup.com may be rebroadcasted, embedded, or resold without prior written consent.</li>
+            <li>No content from getargus.ai may be rebroadcasted, embedded, or resold without prior written consent.</li>
             <li>You may not use AAI's content in any commercial application, software, or third-party platform without authorization.</li>
             <li>Any approved redistribution must retain author attributions, copyright notices, and trademarks.</li>
             <li>Unauthorized use may result in legal action, including account termination, civil liability, and criminal prosecution.</li>
@@ -196,7 +196,7 @@ export default function PrivacyPolicy() {
             Argus AI reserves the right to update or modify this Privacy Policy at any time. Changes will be reflected on this page, and where required, we will provide notice to users.
           </p>
           <p>
-            Your continued use of trafficdatagroup.com after policy updates constitutes acceptance of the revised terms.
+            Your continued use of getargus.ai after policy updates constitutes acceptance of the revised terms.
           </p>
         </>
       )
@@ -251,7 +251,7 @@ export default function PrivacyPolicy() {
             Argus AI ("AAI," "we," "us," or "our") is committed to protecting the privacy and security of our users. This Privacy Policy outlines the types of information we collect, how we use it, and the measures we take to safeguard your data.
           </p>
           <p className="text-gray-800 leading-relaxed mt-4">
-            By using trafficdatagroup.com or any associated services, you consent to the practices outlined in this Privacy Policy.
+            By using getargus.ai or any associated services, you consent to the practices outlined in this Privacy Policy.
           </p>
         </div>
 
