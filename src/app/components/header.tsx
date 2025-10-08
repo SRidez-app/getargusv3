@@ -55,7 +55,7 @@ export default function Header() {
           <div className="flex-shrink-0 w-1/4">
             <Link href="/">
               <Image
-                src="/images/logo.png"
+                src="/logo.png"
                 alt="Argus Logo"
                 width={120}
                 height={60}
