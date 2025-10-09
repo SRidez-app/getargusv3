@@ -20,7 +20,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/">
               <Image
-                src="/images/logo.png"
+                src="/logo.png"
                 alt="Argus Logo"
                 width={80}
                 height={80}
