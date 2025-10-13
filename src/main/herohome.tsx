@@ -97,7 +97,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-[85vh] md:h-screen w-full overflow-hidden">
       {/* Fallback Image - MOBILE ONLY */}
       <div className="md:hidden absolute inset-0">
         <Image
