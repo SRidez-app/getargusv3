@@ -104,6 +104,8 @@ export default function Hero() {
         loop
         muted
         playsInline
+        webkit-playsinline="true"  // Add this for older iOS
+        x5-playsinline="true" 
         preload="auto"
         className="absolute inset-0 w-full h-full object-cover opacity-22"
       >
@@ -117,6 +119,8 @@ export default function Hero() {
         loop
         muted
         playsInline
+        webkit-playsinline="true"  // Add this for older iOS
+        x5-playsinline="true" 
         preload="auto"
         className="absolute inset-0 w-full h-full object-cover opacity-30"
       >
