@@ -104,9 +104,11 @@ export default function Hero() {
           src="/images/fallback.png"
           alt="Traffic Camera Background"
           fill
-          className="object-cover opacity-22"
+          className="object-cover"
           priority
         />
+        {/* DARK OVERLAY - This creates the dark effect */}
+        <div className="absolute inset-0 bg-black opacity-70"></div>
       </div>
 
       {/* Background Video - DESKTOP ONLY */}
