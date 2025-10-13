@@ -84,6 +84,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -97,32 +98,39 @@ export default function Hero() {
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Background Video */}
+      {/* Fallback Image - MOBILE ONLY */}
+      <div className="md:hidden absolute inset-0">
+        <Image
+          src="/images/fallback.png"
+          alt="Traffic Camera Background"
+          fill
+          className="object-cover opacity-22"
+          priority
+        />
+      </div>
+
+      {/* Background Video - DESKTOP ONLY */}
       <video
         ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
-        webkit-playsinline="true"  // Add this for older iOS
-        x5-playsinline="true" 
         preload="auto"
-        className="absolute inset-0 w-full h-full object-cover opacity-22"
+        className="hidden md:block absolute inset-0 w-full h-full object-cover opacity-22"
       >
         <source src="/videos/herovideo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      {/* Overlay Video with Reduced Opacity */}
+      {/* Overlay Video with Reduced Opacity - DESKTOP ONLY */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        webkit-playsinline="true"  // Add this for older iOS
-        x5-playsinline="true" 
         preload="auto"
-        className="absolute inset-0 w-full h-full object-cover opacity-30"
+        className="hidden md:block absolute inset-0 w-full h-full object-cover opacity-30"
       >
         <source src="/videos/herovideo2.mp4" type="video/mp4" />
         Your browser does not support the video tag.
@@ -133,7 +141,7 @@ export default function Hero() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl">
             {/* Main Heading - Scales up on larger screens */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-#0F172A mb-4 lg:mb-6 leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-white mb-4 lg:mb-6 leading-tight">
               Building Smarter Cities with{' '}
               <span className="text-[#C9A23A]">AI-Powered</span>{' '}
               Traffic Intelligence
@@ -146,7 +154,7 @@ export default function Hero() {
             </p>
 
             {/* Target Audience - Scales proportionally */}
-            <p className="text-base md:text-lg lg:text-xl xl:text-2xl text-[#C9A23A] mb-8 lg:mb-10">
+            <p className="text-base md:text-lg lg:text-xl xl:text-2xl text-[#F2F5F9] mb-8 lg:mb-10">
               For Cities, 911/PSAPS, Mobility and Last Mile Fleets
             </p>
 
