@@ -1,122 +1,114 @@
 "use client"
 import React from 'react';
+import Link from 'next/link';
 import { TriangleAlert, MapPin, FileVideo } from 'lucide-react';
-
-const animations = `
-  @keyframes spinY {
-    from {
-      transform: rotateY(0deg);
-    }
-    to {
-      transform: rotateY(360deg);
-    }
-  }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes slideInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-`;
 
 const ProductsPage = () => {
   return (
-    <>
-      <style>{animations}</style>
-      <div className="min-h-screen bg-white">
-        {/* Title Section - Full Width */}
-        <div className="w-full px-4 sm:px-6 lg:px-12 pt-8 pb-6" style={{ animation: 'fadeInUp 0.8s ease-out' }}>
-          <div className="max-w-7xl mx-auto text-center">
-             <span className="inline-block text-[#0F172A] font-semibold text-sm uppercase tracking-wider mb-4">
-            Our Products
+    <div className="min-h-screen bg-white">
+      {/* Title Section */}
+      <div className="w-full px-4 sm:px-6 lg:px-12 pt-12 pb-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <span className="inline-block text-[#C9A23A] font-semibold text-sm uppercase tracking-wider mb-4">
+            One Platform
           </span>
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4" style={{ color: '#C9A23A' }}>
-              AI-Powered Solution for Smarter Cities
-            </h2>
-            <p className="text-x1 text-xl text-gray-600 max-w-4xl mx-auto">
-                
-              Tailored intelligence solutions designed to meet the unique challenges of your industry and operational needs
-            </p>
-          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0F172A] mb-6">
+            Three Powerful Capabilities
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-4">
+            Every customer gets access to our complete AI-powered platform with real-time detection, emergency intelligence, and forensic search.
+          </p>
+          <p className="text-base text-gray-500 max-w-2xl mx-auto">
+            One unified solution. No modules to buy separately. Just choose the features your team needs.
+          </p>
         </div>
+      </div>
 
-        {/* Main Content Section */}
-        <div className="w-full flex flex-col lg:flex-row items-center lg:items-stretch relative">
+      {/* Main Content Section */}
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Products - Left Side */}
-          <div className="w-full lg:w-1/2 flex items-center justify-center px-6 sm:px-8 lg:px-12 py-8 relative">
-            <div className="max-w-2xl w-full space-y-8 sm:space-y-10 lg:space-y-12">
-              
-              {/* AI Traffic Alerts */}
-              <div className="flex items-start gap-4 sm:gap-6" style={{ animation: 'fadeInUp 1s ease-out 0.2s backwards' }}>
-                <div style={{ animation: 'spinY 3s linear infinite', transformStyle: 'preserve-3d' }}>
-                  <TriangleAlert className="w-10 h-10 sm:w-12 sm:h-12 text-yellow-500 flex-shrink-0" strokeWidth={1.5} />
+          <div className="space-y-8">
+            
+            {/* AI Traffic Alerts */}
+            <div className="bg-[#F2F5F9] rounded-xl p-6 border-l-4 border-[#C9A23A] hover:shadow-lg transition-shadow duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#0F172A] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <TriangleAlert className="w-6 h-6 text-[#C9A23A]" strokeWidth={2} />
                 </div>
-                <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Argus AI Traffic Detection</h3>
-                  <p className="text-gray-600 text-base sm:text-lg">
-                    Real time traffic incident, congestion, first responder, wrong way driving monitoring.
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-[#0F172A] mb-2">Real-Time Traffic Detection</h3>
+                  <p className="text-gray-700 text-base leading-relaxed">
+                    Computer vision detects crashes, stalls, and hazards in under 10 seconds. Instant alerts to traffic centers, emergency services, and fleets.
                   </p>
                 </div>
               </div>
-
-              {/* Argus 911 */}
-              <div className="flex items-start gap-4 sm:gap-6" style={{ animation: 'fadeInUp 1s ease-out 0.4s backwards' }}>
-                <div style={{ animation: 'spinY 3s linear infinite', transformStyle: 'preserve-3d' }}>
-                  <MapPin className="w-10 h-10 sm:w-12 sm:h-12 text-red-500 flex-shrink-0" strokeWidth={1.5} />
-                </div>
-                <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">911/Emergency Intelligence</h3>
-                  <p className="text-gray-600 text-base sm:text-lg">
-                    Critical emergency response and computer-aided dispatch solutions.
-                  </p>
-                </div>
-              </div>
-
-              {/* Argus Archives */}
-              <div className="flex items-start gap-4 sm:gap-6" style={{ animation: 'fadeInUp 1s ease-out 0.6s backwards' }}>
-                <div style={{ animation: 'spinY 3s linear infinite', transformStyle: 'preserve-3d' }}>
-                  <FileVideo className="w-10 h-10 sm:w-12 sm:h-12 text-green-500 flex-shrink-0" strokeWidth={1.5} />
-                </div>
-                <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Argus Archives & Open Records</h3>
-                  <p className="text-gray-600 text-base sm:text-lg">
-                    Comprehensive records management and public information access.
-                  </p>
-                </div>
-              </div>
-
             </div>
+
+            {/* Emergency Intelligence */}
+            <div className="bg-[#F2F5F9] rounded-xl p-6 border-l-4 border-[#C9A23A] hover:shadow-lg transition-shadow duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#0F172A] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-[#C9A23A]" strokeWidth={2} />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-[#0F172A] mb-2">911/Emergency Intelligence</h3>
+                  <p className="text-gray-700 text-base leading-relaxed">
+                    Coordinated alerts to dispatch, EMS, police, and fire. Automated incident reporting that arrives before 911 calls.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Archives */}
+            <div className="bg-[#F2F5F9] rounded-xl p-6 border-l-4 border-[#C9A23A] hover:shadow-lg transition-shadow duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#0F172A] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <FileVideo className="w-6 h-6 text-[#C9A23A]" strokeWidth={2} />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-[#0F172A] mb-2">Forensic Search & Archives</h3>
+                  <p className="text-gray-700 text-base leading-relaxed">
+                    AI-powered search across thousands of cameras. Find any incident in minutes. Long-term archival of footage that others delete.
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
 
           {/* Image - Right Side */}
-          <div className="w-full lg:w-1/2 flex items-center justify-center px-6 sm:px-8 lg:px-12 py-8" style={{ animation: 'slideInLeft 1s ease-out 0.3s backwards' }}>
-            <div className="max-w-md w-full">
+          <div className="flex items-center justify-center">
+            <div className="relative">
               <img 
                 src="/images/productitem.png" 
-                alt="AI Traffic Monitoring" 
-                className="w-full h-auto"
+                alt="Argus AI Platform Dashboard" 
+             
               />
             </div>
           </div>
         </div>
+
+        {/* CTA Section */}
+        <div className="mt-16 text-center bg-gradient-to-br from-[#F2F5F9] to-white rounded-2xl p-10 border border-gray-200">
+          <h3 className="text-2xl md:text-3xl font-bold text-[#0F172A] mb-4">
+            Ready to see it in action?
+          </h3>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Schedule a demo to see how our platform can transform your traffic operations, emergency response, and investigations.
+          </p>
+          <Link
+            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3opt3pRGPQDYnT5IBpyltSRS764eRUP_ptoibtRyObzq1DwIR799VDAlXQucq2AnDlZgrN3vPV"
+            className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-lg text-[#0F172A] bg-[#7FB7FF] hover:bg-[#A5CEFF] transform hover:scale-105 transition-all duration-200 shadow-lg"
+          >
+            Schedule a Demo
+            <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </Link>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
