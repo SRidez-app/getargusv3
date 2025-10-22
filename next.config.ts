@@ -37,6 +37,11 @@ const nextConfig: NextConfig = {
         destination: '/',
         permanent: true,
       },
+      {
+        source: '/dots-traffic-engineers-and-911-dispatch',
+        destination: '/solutions#incident-911',
+        permanent: true,
+      },
     ];
   },
 };
