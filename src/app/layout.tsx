@@ -148,11 +148,7 @@ export default function RootLayout({
                 "@type": "Offer",
                 "availability": "https://schema.org/InStock",
                 "url": "https://www.getargus.ai"
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "reviewCount": "127"
+
               },
               "featureList": [
                 "Sub-10-second incident detection",
