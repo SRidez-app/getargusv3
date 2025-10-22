@@ -204,25 +204,7 @@ export default function RootLayout({
           }}
         />
 
-        {/* Website Schema */}
-        <Script
-          id="schema-website"
-          type="application/ld+json"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "Argus AI",
-              "url": "https://www.getargus.ai",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://www.getargus.ai/search?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            })
-          }}
-        />
+    
       </head>
       <body
         className={`${libreFranklin.variable} ${ibmPlexSans.variable} antialiased`}
